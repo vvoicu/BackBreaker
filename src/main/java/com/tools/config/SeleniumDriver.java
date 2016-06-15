@@ -27,9 +27,9 @@ public class SeleniumDriver {
 			case FIREFOX :
 				driver = new FirefoxDriver();
 				break;
-//			case CHROME :
-//				setChromeProperties();
-//				break;
+			case CHROME :
+				setChromeProperties();
+				break;
 
 			default :
 				driver = new FirefoxDriver();
@@ -48,7 +48,7 @@ public class SeleniumDriver {
 	}
 	
 	public static void setChromeProperties() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Darko\\git\\SeleniumGaleon\\resources\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "resources\\chromedriver.exe");
 
 		ChromeOptions options = new ChromeOptions();
 //		options.addArguments("window-size=1024,768");

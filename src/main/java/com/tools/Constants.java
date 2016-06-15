@@ -4,7 +4,7 @@ public class Constants {
 	
 	// WebDriver Browser type Constants
 	public enum DRIVER_TYPE {
-		FIREFOX,
+		FIREFOX, CHROME,
 	};
 
 	public static final String BASE_URL = "http://labm3pcoe154.hpswlabs.adapps.hp.com:8088/ucmdb-browser/";
