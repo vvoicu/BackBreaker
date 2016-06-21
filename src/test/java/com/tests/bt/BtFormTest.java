@@ -7,12 +7,14 @@ import org.junit.runners.JUnit4;
 
 import com.DateAndPOD;
 import com.bank.bt.data.model.BrokerInfoModel;
+import com.bank.bt.data.model.ClientDetaliiModel;
 import com.bank.bt.data.model.DateFinanciareModel;
 import com.bank.bt.data.model.OfertaInfoModel;
 import com.bank.bt.pages.LoginPage;
 import com.bank.bt.pages.form.oferta.BrokerInfoPage;
 import com.bank.bt.pages.form.oferta.OfertaInfoPage;
 import com.bank.bt.pages.form.oferta.ProdusDeFinantarePage;
+import com.bank.bt.pages.form.oferta.client.ClientDetaliiPage;
 import com.bank.bt.pages.form.oferta.client.DateFinanciarePage;
 import com.bank.bt.pages.menu.MenuPage;
 import com.bank.bt.pages.menu.OfferListPage;
@@ -30,6 +32,7 @@ public class BtFormTest extends BaseTest {
 	private OfertaInfoPage ofertaInfoPage;
 	private ProdusDeFinantarePage produsDeFinantarePage;
 	private DateFinanciarePage dateFinanciarePage;
+	private ClientDetaliiPage clientDetaliiPage;
 	
 	
 	@Before
@@ -41,6 +44,7 @@ public class BtFormTest extends BaseTest {
 		ofertaInfoPage = new OfertaInfoPage(driver);
 		produsDeFinantarePage= new ProdusDeFinantarePage(driver);
 		dateFinanciarePage = new DateFinanciarePage(driver);
+		clientDetaliiPage = new ClientDetaliiPage(driver);
 	}
 	
 	
@@ -71,7 +75,9 @@ public class BtFormTest extends BaseTest {
 		DateFinanciareModel dateFinanciareModel = dateFinanciarePage.grabDateFinanciare();
 		PrintUtils.printDateFinanciareModel(dateFinanciareModel);
 		
-		
+		clientDetaliiPage.fillDetaliiClient("Amu", "Mani", "1870000192193", "BN", "123465", "11254487", "9988228882", "example@mail.com", "Stangulescu Dreptu", "este", "Altele", "2", "2");
+		ClientDetaliiModel clientDetaliiModel = clientDetaliiPage.grabDetaliiClient();
+		PrintUtils.printClienttDetaliiModel(clientDetaliiModel);
 		
 		
 	}

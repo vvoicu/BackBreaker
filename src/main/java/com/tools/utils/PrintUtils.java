@@ -1,6 +1,7 @@
 package com.tools.utils;
 
 import com.bank.bt.data.model.BrokerInfoModel;
+import com.bank.bt.data.model.ClientDetaliiModel;
 import com.bank.bt.data.model.DateFinanciareModel;
 import com.bank.bt.data.model.OfertaInfoModel;
 
@@ -37,6 +38,24 @@ public class PrintUtils {
 		System.out.println("rateCredit: " + dateFinanciareModel.rateCredit);
 		System.out.println("venitLunar: " + dateFinanciareModel.venitLunar);
 		System.out.println("venitLunarCodebitor: " + dateFinanciareModel.venitLunarCodebitor);
+		
+	}
+
+	public static void printClienttDetaliiModel(ClientDetaliiModel clientDetaliiModel) {
+		System.out.println("------ClientDetaliiModel---------");
+		System.out.println("nume: " + clientDetaliiModel.nume);
+		System.out.println("prenume: " + clientDetaliiModel.prenume);
+		System.out.println("cnp: " + clientDetaliiModel.cnp);
+		System.out.println("serieBi: " + clientDetaliiModel.serieBi);
+		System.out.println("numarBi: " + clientDetaliiModel.numarBi);
+		System.out.println("telefonFix: " + clientDetaliiModel.telefonFix);
+		System.out.println("telefonMobil: " + clientDetaliiModel.telefonMobil);
+		System.out.println("email: " + clientDetaliiModel.email);
+		System.out.println("proprietarImobil: " + clientDetaliiModel.proprietarImobil);
+		System.out.println("gradRudenie: " + clientDetaliiModel.gradRudenie);
+		System.out.println("situatieLocuintaSelect: " + clientDetaliiModel.situatieLocuintaSelect);
+		System.out.println("numarMembriiSelect: " + clientDetaliiModel.numarMembriiSelect);
+		System.out.println("membriiCuVenitSelect: " + clientDetaliiModel.membriiCuVenitSelect);
 		
 	}
 }
