@@ -40,12 +40,13 @@ public class DateFinanciarePage extends AbstractPage {
 
 	public void inputVenitLunar(String venitText) {
 		WebElement venitLunarInput = waitForElementByCssLocator(venitLunarInputLocator);
+		venitLunarInput.clear();
 		venitLunarInput.sendKeys(venitText);
 	}
 
 	public String grabVenitLunar() {
 		WebElement venitLunarInput = waitForElementByCssLocator(venitLunarInputLocator);
-		return venitLunarInput.getText();
+		return venitLunarInput.getAttribute("value");
 	}
 
 	public void inputPensie(String pensieText) {
@@ -55,7 +56,7 @@ public class DateFinanciarePage extends AbstractPage {
 
 	public String grabPensie() {
 		WebElement venitLunarInput = waitForElementByCssLocator(pensieInputLocator);
-		return venitLunarInput.getText();
+		return venitLunarInput.getAttribute("value");
 	}
 
 	public void inputAlteVenituri(String alteVenituriText) {
@@ -65,7 +66,7 @@ public class DateFinanciarePage extends AbstractPage {
 
 	public String grabAlteVenituri() {
 		WebElement venitLunarInput = waitForElementByCssLocator(altevenituriTextareaLocator);
-		return venitLunarInput.getText();
+		return venitLunarInput.getAttribute("value");
 	}
 
 	// codebitor
@@ -81,7 +82,7 @@ public class DateFinanciarePage extends AbstractPage {
 
 	public String grabVenitLunarCodebitor() {
 		WebElement venitLunarInput = waitForElementByCssLocator(venitLunarCodebitorInputLocator);
-		return venitLunarInput.getText();
+		return venitLunarInput.getAttribute("value");
 	}
 
 	public void inputPensieCodebitor(String pensieText) {
@@ -91,7 +92,7 @@ public class DateFinanciarePage extends AbstractPage {
 
 	public String grabPensieCodebitor() {
 		WebElement pensieInput = waitForElementByCssLocator(pensieCodebitorInputLocator);
-		return pensieInput.getText();
+		return pensieInput.getAttribute("value");
 	}
 
 	public void inputChirie(String pensieText) {
@@ -101,7 +102,7 @@ public class DateFinanciarePage extends AbstractPage {
 
 	public String grabChirie() {
 		WebElement chirieInput = waitForElementByCssLocator(chirieInputLocator);
-		return chirieInput.getText();
+		return chirieInput.getAttribute("value");
 	}
 
 	public void inputRateCredit(String rateCreditText) {
@@ -111,6 +112,6 @@ public class DateFinanciarePage extends AbstractPage {
 
 	public String grabRateCredit() {
 		WebElement rateCreditInput = waitForElementByCssLocator(rateCreditInputLocator);
-		return rateCreditInput.getText();
+		return rateCreditInput.getAttribute("value");
 	}
 }
