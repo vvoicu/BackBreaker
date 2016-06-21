@@ -17,7 +17,7 @@ public class PrintUtils {
 	
 	public static void printOfertaInfoModel(OfertaInfoModel ofertaInfoModel){
 		System.out.println("-----OfertaInfoModel----------");
-		System.out.println("numerOferta: " + ofertaInfoModel.numerOferta);
+		System.out.println("numarOferta: " + ofertaInfoModel.numarOferta);
 		System.out.println("pretTotal: " + ofertaInfoModel.pretTotal);
 		System.out.println("valFin: " + ofertaInfoModel.valFin);
 		System.out.println("costTotal: " + ofertaInfoModel.costTotal);

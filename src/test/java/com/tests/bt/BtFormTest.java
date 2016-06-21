@@ -54,10 +54,13 @@ public class BtFormTest extends BaseTest {
 		
 		//open form with customer details
 		offerListPage.clickAddOffer();
+		
 		BrokerInfoModel brokerData = brokerInfoPage.grabBrokerInfoData();
 		PrintUtils.printBrokerInfoModel(brokerData);
+		
 		OfertaInfoModel ofertaData = ofertaInfoPage.grabOfertaInfoData();
 		PrintUtils.printOfertaInfoModel(ofertaData);
+		
 		produsDeFinantarePage.setDurata("54");
 		System.out.println(produsDeFinantarePage.grabDurata());
 		
@@ -67,6 +70,9 @@ public class BtFormTest extends BaseTest {
 		dateFinanciarePage.inputVenitLunar("900");
 		DateFinanciareModel dateFinanciareModel = dateFinanciarePage.grabDateFinanciare();
 		PrintUtils.printDateFinanciareModel(dateFinanciareModel);
+		
+		
+		
 		
 	}
 

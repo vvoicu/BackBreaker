@@ -25,7 +25,7 @@ public class OfertaInfoPage extends AbstractPage {
 	public OfertaInfoModel grabOfertaInfoData() {
 		OfertaInfoModel resultData = new OfertaInfoModel();
 
-		resultData.numerOferta = grabNumarOferta();
+		resultData.numarOferta = grabNumarOferta();
 		resultData.pretTotal = grabPretTotal();
 		resultData.valFin = grabValFin();
 		resultData.costTotal = grabCostTotal();
