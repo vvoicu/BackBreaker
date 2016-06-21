@@ -13,7 +13,7 @@ public class BaseTest {
 	
 	@Before
 	public void testSetup() {
-		driver = SeleniumDriver.pickWebdriver(DRIVER_TYPE.FIREFOX);
+		driver = SeleniumDriver.pickWebdriver(DRIVER_TYPE.CHROME);
 	}
 	
 	@After

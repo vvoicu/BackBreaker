@@ -4,13 +4,13 @@ public class ClientDetaliiPage {
 
 	public String numeInputLocator = "[id*='WebOfferClientCtrl1_txtLastName']";
 	public String prenumeInputLocator = "[id*='WebOfferClientCtrl1_txtFirstName']";
-	public String cnpInputLocator = "[id*='']";
-	public String serieBiInputLocator = "[id*='']";
-	public String numarBiInputLocator = "[id*='']";
-	public String telefonFixInputLocator = "[id*='']";
-	public String telefonMobilInputLocator = "[id*='']";
-	public String emailInputLocator = "[id*='']";
-	public String proprietarImobilLocuintaInputLocator = "[id*='']";
+	public String cnpInputLocator = "[id*='WebOfferClientCtrl1_txtUniqueID']";
+	public String serieBiInputLocator = "[id*='WebOfferClientCtrl1_txtBI_CISerial']";
+	public String numarBiInputLocator = "[id*='WebOfferClientCtrl1_txtBI_CINumber']";
+	public String telefonFixInputLocator = "[id*='WebOfferClientCtrl1_txtPhone']";
+	public String telefonMobilInputLocator = "[id*='WebOfferClientCtrl1_txtMobilePhone']";
+	public String emailInputLocator = "[id*='WebOfferClientCtrl1_txtEmail_I']";
+	public String proprietarImobilLocuintaInputLocator = "[id*='WebOfferClientCtrl1_txtBuildingOwner']";
 	public String gradRudenieCuProprietarInputLocator = "[id*='']";
 	public String situatieLocuintaActualaDropdownLocator = "[id*='']";
 	public String numarDeMembriiFamilieDropdownLocator = "[id*='']";
