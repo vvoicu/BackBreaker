@@ -66,6 +66,8 @@ public class PrintUtils {
 		System.out.println("strada: " + adresaModel.strada);
 		System.out.println("tara: " + adresaModel.tara);
 		System.out.println("telefon: " + adresaModel.telefon);
+		System.out.println("localitate: " + adresaModel.localitate);
+		System.out.println("judet: " + adresaModel.judet);
 		
 	}
 }

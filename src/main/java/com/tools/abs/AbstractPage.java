@@ -62,7 +62,7 @@ public class AbstractPage {
 		selectDropdown.selectByVisibleText(textValue);
 	}
 	
-	public void windowHandles(){
+	protected void windowHandles(){
 		Set<String> windowHandles = driver.getWindowHandles();
 		
 		for (String string : windowHandles) {
@@ -75,7 +75,7 @@ public class AbstractPage {
 		return driver.getWindowHandle();
 	}
 	
-	public void switchToExtraWindow(String parentWindow){
+	protected void switchToExtraWindow(String parentWindow){
 		Set<String> windowHandles = driver.getWindowHandles();
 		
 		for (String string : windowHandles) {
@@ -86,7 +86,7 @@ public class AbstractPage {
 		}
 	}
 	
-	public void switchToWindow(String windowHandle){
+	protected void switchToWindow(String windowHandle){
 		driver.switchTo().window(windowHandle);
 	}
 }

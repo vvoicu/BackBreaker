@@ -48,7 +48,7 @@ public class SearchFormPage extends AbstractPage{
 		theFor:
 		for (WebElement webElement : listElements) {
 			System.out.println("rowNow: " + webElement.getText());
-			if(webElement.getText().contains(search)){
+			if(webElement.getText().toLowerCase().contains(search.toLowerCase())){
 				webElement.findElement(By.cssSelector("img")).click();
 				break theFor;
 			}
@@ -61,6 +61,7 @@ public class SearchFormPage extends AbstractPage{
 		clickSearchButton();
 		selectFromList(search);
 		switchToWindow(mainWindow);
+		
 	}
 	
 	

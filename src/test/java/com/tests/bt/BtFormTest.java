@@ -37,7 +37,6 @@ public class BtFormTest extends BaseTest {
 	private DateFinanciarePage dateFinanciarePage;
 	private ClientDetaliiPage clientDetaliiPage;
 	private AdresaDomiciliuPage adresaDomiciliuPage;
-	private SearchFormPage searchFormPage;
 	
 	
 	@Before
@@ -51,7 +50,6 @@ public class BtFormTest extends BaseTest {
 		dateFinanciarePage = new DateFinanciarePage(driver);
 		clientDetaliiPage = new ClientDetaliiPage(driver);
 		adresaDomiciliuPage = new AdresaDomiciliuPage(driver);
-		searchFormPage = new SearchFormPage(driver);
 	}
 	
 	
@@ -88,19 +86,16 @@ public class BtFormTest extends BaseTest {
 		
 		//grab main window identifier
 		String mainWindow = adresaDomiciliuPage.getWindowHandle();
-		adresaDomiciliuPage.clickTaraFormViewButton();
 
 		//Open window with search items;
-		searchFormPage.inputSearchTerm(mainWindow, "Aus");
-//		searchFormPage.inputSearchTerm(mainWindow, "Doar Marea");
-		
-		adresaDomiciliuPage.inputAdresa("someAddress sda");
-		adresaDomiciliuPage.inputStrada("Strida asin");
-		adresaDomiciliuPage.inputTelefon("4568879421");
+		adresaDomiciliuPage.fillAdresaDomiciliuForm(mainWindow, "ADR 231", "GuguStrada ", "0011442255", "Romania", "Cluj", "Cluj");
 		
 		AdresaModel adresaDomiciliu  = adresaDomiciliuPage.grabAdresaDomiciliuData();
-		
 		PrintUtils.printAdresaModel(adresaDomiciliu);
+		
+		
+		
+		
 	}
 
 }

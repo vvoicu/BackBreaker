@@ -1,9 +1,9 @@
 package com.bank.bt.pages.form.oferta.client.adresa.domiciliu;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import com.bank.bt.data.model.AdresaModel;
+import com.bank.bt.pages.form.oferta.SearchFormPage;
 import com.tools.abs.AbstractPage;
 
 public class AdresaDomiciliuPage extends AbstractPage{
@@ -24,9 +24,23 @@ public class AdresaDomiciliuPage extends AbstractPage{
 	
 	private String localitateInputLocator = "[id*='fwkSocialAddressCity']";
 	private String localitateFormLocator = "[id*='fwkSocialAddressCity'] + a[href*='fwkSocialAddressCity']";
+
 	
-	public void clickTaraFormViewButton(){
-		waitForElementByCssLocator(taraFormLocator).click();
+	public void fillAdresaDomiciliuForm(String mainWindowHandle, String adresa, String strada, String telefon, String tara, String judet, String localitate){
+		SearchFormPage searchForm = new SearchFormPage(driver);
+		
+		inputAdresa(adresa);
+		inputStrada(strada);
+		inputTelefon(telefon);
+		clickTaraFormViewButton();
+		searchForm.inputSearchTerm(mainWindowHandle, tara);
+		
+		clickJudetFormButton();
+		searchForm.inputSearchTerm(mainWindowHandle, judet);
+		
+		clickLocalitateFormButton();
+		searchForm.inputSearchTerm(mainWindowHandle, localitate);
+		
 	}
 	
 	public AdresaModel grabAdresaDomiciliuData(){
@@ -35,36 +49,57 @@ public class AdresaDomiciliuPage extends AbstractPage{
 		formData.strada = grabStrada();
 		formData.telefon = grabTelefon();
 		formData.tara = grabTara();
+		formData.judet = grabJudet();
+		formData.localitate = grabLocalitate();
 		
 		return formData;
 	}
 	
-	public String grabTara(){
-		WebElement taraInput = waitForElementByCssLocator(taraInputLocator);
-		return taraInput.getAttribute("value");
+	private String grabLocalitate(){
+		return waitForElementByCssLocator(localitateInputLocator).getAttribute("value");
 	}
 	
-	public void inputStrada(String strada){
+	private void clickLocalitateFormButton(){
+		waitForElementByCssLocator(localitateFormLocator).click();
+	}
+	
+	private String grabJudet(){
+		return waitForElementByCssLocator(judetInputLocator).getAttribute("value");
+	}
+	
+	private void clickJudetFormButton(){
+		waitForElementByCssLocator(judetFormLocator).click();
+	}
+	
+	private String grabTara(){
+		return waitForElementByCssLocator(taraInputLocator).getAttribute("value");
+	}
+	
+	private void clickTaraFormViewButton(){
+		waitForElementByCssLocator(taraFormLocator).click();
+	}
+	
+	private void inputStrada(String strada){
 		waitForElementByCssLocator(stradaInputLocator).sendKeys(strada);
 	}
 	
-	public String grabStrada(){
+	private String grabStrada(){
 		return waitForElementByCssLocator(stradaInputLocator).getAttribute("value");
 	}
 	
-	public void inputAdresa(String adresa){
+	private void inputAdresa(String adresa){
 		waitForElementByCssLocator(adresaInputLocator).sendKeys(adresa);
 	}
 	
-	public String grabAdresa(){
+	private String grabAdresa(){
 		return waitForElementByCssLocator(adresaInputLocator).getAttribute("value");
 	}
 	
-	public void inputTelefon(String telefon){
+	private void inputTelefon(String telefon){
 		waitForElementByCssLocator(telefonInputLocator).sendKeys(telefon);
 	}
 	
-	public String grabTelefon(){
+	private String grabTelefon(){
 		return waitForElementByCssLocator(telefonInputLocator).getAttribute("value");
 	}
 	
