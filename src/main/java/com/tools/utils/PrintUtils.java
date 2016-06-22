@@ -1,5 +1,6 @@
 package com.tools.utils;
 
+import com.bank.bt.data.model.AdresaModel;
 import com.bank.bt.data.model.BrokerInfoModel;
 import com.bank.bt.data.model.ClientDetaliiModel;
 import com.bank.bt.data.model.DateFinanciareModel;
@@ -56,6 +57,15 @@ public class PrintUtils {
 		System.out.println("situatieLocuintaSelect: " + clientDetaliiModel.situatieLocuintaSelect);
 		System.out.println("numarMembriiSelect: " + clientDetaliiModel.numarMembriiSelect);
 		System.out.println("membriiCuVenitSelect: " + clientDetaliiModel.membriiCuVenitSelect);
+		
+	}
+
+	public static void printAdresaModel(AdresaModel adresaModel) {
+		System.out.println("------AdresaModel---------");
+		System.out.println("adresa: " + adresaModel.adresa);
+		System.out.println("strada: " + adresaModel.strada);
+		System.out.println("tara: " + adresaModel.tara);
+		System.out.println("telefon: " + adresaModel.telefon);
 		
 	}
 }

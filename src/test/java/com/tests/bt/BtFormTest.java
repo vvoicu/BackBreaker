@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import com.DateAndPOD;
+import com.bank.bt.data.model.AdresaModel;
 import com.bank.bt.data.model.BrokerInfoModel;
 import com.bank.bt.data.model.ClientDetaliiModel;
 import com.bank.bt.data.model.DateFinanciareModel;
@@ -90,12 +91,16 @@ public class BtFormTest extends BaseTest {
 		adresaDomiciliuPage.clickTaraFormViewButton();
 
 		//Open window with search items;
-		searchFormPage.inputSearchTerm(mainWindow, "Doar Marea");
+		searchFormPage.inputSearchTerm(mainWindow, "Aus");
+//		searchFormPage.inputSearchTerm(mainWindow, "Doar Marea");
 		
-//		adresaDomiciliuPage.
+		adresaDomiciliuPage.inputAdresa("someAddress sda");
+		adresaDomiciliuPage.inputStrada("Strida asin");
+		adresaDomiciliuPage.inputTelefon("4568879421");
 		
+		AdresaModel adresaDomiciliu  = adresaDomiciliuPage.grabAdresaDomiciliuData();
 		
-		
+		PrintUtils.printAdresaModel(adresaDomiciliu);
 	}
 
 }
