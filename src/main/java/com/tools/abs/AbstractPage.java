@@ -1,6 +1,7 @@
 package com.tools.abs;
 
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -59,5 +60,33 @@ public class AbstractPage {
 	protected void selectFromDropdownByVisibleText(String cssLocator, String textValue) {
 		Select selectDropdown = new Select(waitForElementByCssLocator(cssLocator));
 		selectDropdown.selectByVisibleText(textValue);
+	}
+	
+	public void windowHandles(){
+		Set<String> windowHandles = driver.getWindowHandles();
+		
+		for (String string : windowHandles) {
+			System.out.println("WindowNow: " + string);
+		}
+	}
+	
+	
+	public String getWindowHandle(){
+		return driver.getWindowHandle();
+	}
+	
+	public void switchToExtraWindow(String parentWindow){
+		Set<String> windowHandles = driver.getWindowHandles();
+		
+		for (String string : windowHandles) {
+			if(!string.contains(parentWindow)){
+				driver.switchTo().window(string);
+				break;
+			}
+		}
+	}
+	
+	public void switchToWindow(String windowHandle){
+		driver.switchTo().window(windowHandle);
 	}
 }

@@ -14,8 +14,10 @@ import com.bank.bt.pages.LoginPage;
 import com.bank.bt.pages.form.oferta.BrokerInfoPage;
 import com.bank.bt.pages.form.oferta.OfertaInfoPage;
 import com.bank.bt.pages.form.oferta.ProdusDeFinantarePage;
+import com.bank.bt.pages.form.oferta.SearchFormPage;
 import com.bank.bt.pages.form.oferta.client.ClientDetaliiPage;
 import com.bank.bt.pages.form.oferta.client.DateFinanciarePage;
+import com.bank.bt.pages.form.oferta.client.adresa.domiciliu.AdresaDomiciliuPage;
 import com.bank.bt.pages.menu.MenuPage;
 import com.bank.bt.pages.menu.OfferListPage;
 import com.tests.BaseTest;
@@ -33,6 +35,8 @@ public class BtFormTest extends BaseTest {
 	private ProdusDeFinantarePage produsDeFinantarePage;
 	private DateFinanciarePage dateFinanciarePage;
 	private ClientDetaliiPage clientDetaliiPage;
+	private AdresaDomiciliuPage adresaDomiciliuPage;
+	private SearchFormPage searchFormPage;
 	
 	
 	@Before
@@ -45,6 +49,8 @@ public class BtFormTest extends BaseTest {
 		produsDeFinantarePage= new ProdusDeFinantarePage(driver);
 		dateFinanciarePage = new DateFinanciarePage(driver);
 		clientDetaliiPage = new ClientDetaliiPage(driver);
+		adresaDomiciliuPage = new AdresaDomiciliuPage(driver);
+		searchFormPage = new SearchFormPage(driver);
 	}
 	
 	
@@ -77,7 +83,17 @@ public class BtFormTest extends BaseTest {
 		
 		clientDetaliiPage.fillDetaliiClient("Amu", "Mani", "1870000192193", "BN", "123465", "11254487", "9988228882", "example@mail.com", "Stangulescu Dreptu", "este", "Altele", "2", "2");
 		ClientDetaliiModel clientDetaliiModel = clientDetaliiPage.grabDetaliiClient();
-		PrintUtils.printClienttDetaliiModel(clientDetaliiModel);
+		PrintUtils.printClientDetaliiModel(clientDetaliiModel);
+		
+		//grab main window identifier
+		String mainWindow = adresaDomiciliuPage.getWindowHandle();
+		adresaDomiciliuPage.clickTaraFormViewButton();
+
+		//Open window with search items;
+		searchFormPage.inputSearchTerm(mainWindow, "Doar Marea");
+		
+//		adresaDomiciliuPage.
+		
 		
 		
 	}

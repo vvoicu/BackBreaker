@@ -41,7 +41,7 @@ public class PrintUtils {
 		
 	}
 
-	public static void printClienttDetaliiModel(ClientDetaliiModel clientDetaliiModel) {
+	public static void printClientDetaliiModel(ClientDetaliiModel clientDetaliiModel) {
 		System.out.println("------ClientDetaliiModel---------");
 		System.out.println("nume: " + clientDetaliiModel.nume);
 		System.out.println("prenume: " + clientDetaliiModel.prenume);
