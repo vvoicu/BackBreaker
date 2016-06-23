@@ -11,45 +11,16 @@ import com.bank.bt.data.model.BrokerInfoModel;
 import com.bank.bt.data.model.ClientDetaliiModel;
 import com.bank.bt.data.model.DateFinanciareModel;
 import com.bank.bt.data.model.OfertaInfoModel;
-import com.bank.bt.pages.LoginPage;
-import com.bank.bt.pages.form.oferta.BrokerInfoPage;
-import com.bank.bt.pages.form.oferta.OfertaInfoPage;
-import com.bank.bt.pages.form.oferta.ProdusDeFinantarePage;
-import com.bank.bt.pages.form.oferta.SearchFormPage;
-import com.bank.bt.pages.form.oferta.client.ClientDetaliiPage;
-import com.bank.bt.pages.form.oferta.client.DateFinanciarePage;
-import com.bank.bt.pages.form.oferta.client.adresa.domiciliu.AdresaDomiciliuPage;
-import com.bank.bt.pages.menu.MenuPage;
-import com.bank.bt.pages.menu.OfferListPage;
 import com.tests.BaseTest;
 import com.tools.utils.PrintUtils;
 
 @RunWith(JUnit4.class)
 public class BtFormTest extends BaseTest {
 	
-	// pages used
-	private LoginPage loginPage;
-	private OfferListPage offerListPage;
-	private MenuPage menuPage;
-	private BrokerInfoPage brokerInfoPage;
-	private OfertaInfoPage ofertaInfoPage;
-	private ProdusDeFinantarePage produsDeFinantarePage;
-	private DateFinanciarePage dateFinanciarePage;
-	private ClientDetaliiPage clientDetaliiPage;
-	private AdresaDomiciliuPage adresaDomiciliuPage;
-	
 	
 	@Before
 	public void setupData(){
-		loginPage = new LoginPage(driver);
-		offerListPage = new OfferListPage(driver);
-		menuPage = new MenuPage(driver);
-		brokerInfoPage = new BrokerInfoPage(driver);
-		ofertaInfoPage = new OfertaInfoPage(driver);
-		produsDeFinantarePage= new ProdusDeFinantarePage(driver);
-		dateFinanciarePage = new DateFinanciarePage(driver);
-		clientDetaliiPage = new ClientDetaliiPage(driver);
-		adresaDomiciliuPage = new AdresaDomiciliuPage(driver);
+
 	}
 	
 	
@@ -84,6 +55,8 @@ public class BtFormTest extends BaseTest {
 		ClientDetaliiModel clientDetaliiModel = clientDetaliiPage.grabDetaliiClient();
 		PrintUtils.printClientDetaliiModel(clientDetaliiModel);
 		
+		clientDetaliiProfesionalePage.fillClientDetaliiProfesionale("Universitate", "Celibatar", "Productie", "11-50 angajati", "60-120 luni", "Profesionist + PFA cu studii superioare (care profeseaza)");
+		
 		//grab main window identifier
 		String mainWindow = adresaDomiciliuPage.getWindowHandle();
 
@@ -92,6 +65,11 @@ public class BtFormTest extends BaseTest {
 		
 		AdresaModel adresaDomiciliu  = adresaDomiciliuPage.grabAdresaDomiciliuData();
 		PrintUtils.printAdresaModel(adresaDomiciliu);
+		
+		adresaCorespondentaPage.fillAdresaCorespondentaForm(mainWindow, "DDD 2222", "MeGusta ", "0011442255", "Romania", "Bucu", "SECTOR 3");
+		
+		AdresaModel adresaCorespondenta  = adresaCorespondentaPage.grabAdresaCorespondentaData();
+		PrintUtils.printAdresaModel(adresaCorespondenta);
 		
 		
 		
