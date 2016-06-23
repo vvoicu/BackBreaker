@@ -23,7 +23,6 @@ public class BtFormTest extends BaseTest {
 
 	}
 	
-	
 	@Test
 	public void fillBtCreditFormTest(){
 		loginPage.navigateTo(DateAndPOD.BT_BASE_URL);
@@ -71,7 +70,7 @@ public class BtFormTest extends BaseTest {
 		AdresaModel adresaCorespondenta  = adresaCorespondentaPage.grabAdresaCorespondentaData();
 		PrintUtils.printAdresaModel(adresaCorespondenta);
 		
-		
+		footerActionsPage.clickSalveaza();
 		
 		
 	}

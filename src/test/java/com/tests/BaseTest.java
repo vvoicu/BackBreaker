@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.bank.bt.pages.LoginPage;
 import com.bank.bt.pages.form.oferta.BrokerInfoPage;
+import com.bank.bt.pages.form.oferta.FooterActionsPage;
 import com.bank.bt.pages.form.oferta.OfertaInfoPage;
 import com.bank.bt.pages.form.oferta.ProdusDeFinantarePage;
 import com.bank.bt.pages.form.oferta.client.ClientDetaliiPage;
@@ -34,6 +35,8 @@ public class BaseTest {
 	protected ClientDetaliiProfesionalePage clientDetaliiProfesionalePage;
 	protected AdresaDomiciliuPage adresaDomiciliuPage;
 	protected AdresaCorespondentaPage adresaCorespondentaPage;
+	protected FooterActionsPage footerActionsPage;
+	
 	
 	@Before
 	public void testSetup() {
@@ -50,6 +53,8 @@ public class BaseTest {
 		clientDetaliiProfesionalePage = new ClientDetaliiProfesionalePage(driver);
 		adresaDomiciliuPage = new AdresaDomiciliuPage(driver);
 		adresaCorespondentaPage = new AdresaCorespondentaPage(driver);
+		
+		footerActionsPage = new FooterActionsPage(driver);
 	}
 	
 	@After
