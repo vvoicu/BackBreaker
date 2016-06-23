@@ -9,6 +9,7 @@ import com.bank.bt.pages.form.oferta.BrokerInfoPage;
 import com.bank.bt.pages.form.oferta.FooterActionsPage;
 import com.bank.bt.pages.form.oferta.OfertaInfoPage;
 import com.bank.bt.pages.form.oferta.ProdusDeFinantarePage;
+import com.bank.bt.pages.form.oferta.client.ArticolePage;
 import com.bank.bt.pages.form.oferta.client.ClientDetaliiPage;
 import com.bank.bt.pages.form.oferta.client.ClientDetaliiProfesionalePage;
 import com.bank.bt.pages.form.oferta.client.DateFinanciarePage;
@@ -37,6 +38,8 @@ public class BaseTest {
 	protected AdresaCorespondentaPage adresaCorespondentaPage;
 	protected FooterActionsPage footerActionsPage;
 	
+	protected ArticolePage articolePage;
+	
 	
 	@Before
 	public void testSetup() {
@@ -55,6 +58,8 @@ public class BaseTest {
 		adresaCorespondentaPage = new AdresaCorespondentaPage(driver);
 		
 		footerActionsPage = new FooterActionsPage(driver);
+		
+		articolePage = new ArticolePage(driver);
 	}
 	
 	@After

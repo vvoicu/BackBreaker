@@ -49,6 +49,8 @@ public class BtFormTest extends BaseTest {
 		dateFinanciarePage.inputVenitLunar("900");
 		DateFinanciareModel dateFinanciareModel = dateFinanciarePage.grabDateFinanciare();
 		PrintUtils.printDateFinanciareModel(dateFinanciareModel);
+
+		articolePage.clickAdaugaArticolImage();
 		
 		clientDetaliiPage.fillDetaliiClient("Amu", "Mani", "1870000192193", "BN", "123465", "11254487", "9988228882", "example@mail.com", "Stangulescu Dreptu", "este", "Altele", "2", "2");
 		ClientDetaliiModel clientDetaliiModel = clientDetaliiPage.grabDetaliiClient();
@@ -70,8 +72,9 @@ public class BtFormTest extends BaseTest {
 		AdresaModel adresaCorespondenta  = adresaCorespondentaPage.grabAdresaCorespondentaData();
 		PrintUtils.printAdresaModel(adresaCorespondenta);
 		
-		footerActionsPage.clickSalveaza();
+		String alertMessage = footerActionsPage.clickSalveaza();
 		
+		System.out.println("Alert: " + alertMessage);
 		
 	}
 
