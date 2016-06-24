@@ -14,9 +14,9 @@ import com.tools.abs.AbstractPage;
  * @author vvoicu
  *
  */
-public class SearchFormPage extends AbstractPage{
+public class SearchFormModalPage extends AbstractPage{
 
-	public SearchFormPage(WebDriver driver) {
+	public SearchFormModalPage(WebDriver driver) {
 		super(driver);
 	}
 
@@ -47,12 +47,18 @@ public class SearchFormPage extends AbstractPage{
 		
 		theFor:
 		for (WebElement webElement : listElements) {
-			System.out.println("rowNow: " + webElement.getText());
+//			System.out.println("rowNow: " + webElement.getText());
 			if(webElement.getText().toLowerCase().contains(search.toLowerCase())){
 				webElement.findElement(By.cssSelector("img")).click();
 				break theFor;
 			}
 		}
+	}
+	
+	public void selectFromList(String mainWindow, String search){
+		switchToExtraWindow(mainWindow);
+		selectFromList(search);
+		switchToWindow(mainWindow);
 	}
 
 	public void inputSearchTerm(String mainWindow, String search) {

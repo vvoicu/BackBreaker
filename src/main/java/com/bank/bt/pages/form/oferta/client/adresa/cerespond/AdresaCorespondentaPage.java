@@ -3,7 +3,7 @@ package com.bank.bt.pages.form.oferta.client.adresa.cerespond;
 import org.openqa.selenium.WebDriver;
 
 import com.bank.bt.data.model.AdresaModel;
-import com.bank.bt.pages.form.oferta.SearchFormPage;
+import com.bank.bt.pages.form.oferta.SearchFormModalPage;
 import com.tools.abs.AbstractPage;
 
 public class AdresaCorespondentaPage extends AbstractPage{
@@ -28,7 +28,7 @@ public class AdresaCorespondentaPage extends AbstractPage{
 	private String localitateFormLocator = "[id*='fwkMailingAddressCity'] + a[href*='fwkMailingAddressCity']";
 	
 	public void fillAdresaCorespondentaForm(String mainWindowHandle, String adresa, String strada, String telefon, String tara, String judet, String localitate){
-		SearchFormPage searchForm = new SearchFormPage(driver);
+		SearchFormModalPage searchForm = new SearchFormModalPage(driver);
 		
 		inputAdresa(adresa);
 		inputStrada(strada);

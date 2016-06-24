@@ -23,11 +23,12 @@ public class FooterActionsPage extends AbstractPage {
 		try{
 			message = 	driver.switchTo().alert().getText();
 						driver.switchTo().alert().accept();
+						//format message
+						message = message.trim();
 		}catch(Exception e){
 			message = "No alert was displayed";
 		}
 			
-		System.out.println(message);
 		return message;
 	}
 

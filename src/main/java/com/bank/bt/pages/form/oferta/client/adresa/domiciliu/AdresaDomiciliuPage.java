@@ -3,7 +3,7 @@ package com.bank.bt.pages.form.oferta.client.adresa.domiciliu;
 import org.openqa.selenium.WebDriver;
 
 import com.bank.bt.data.model.AdresaModel;
-import com.bank.bt.pages.form.oferta.SearchFormPage;
+import com.bank.bt.pages.form.oferta.SearchFormModalPage;
 import com.tools.abs.AbstractPage;
 
 public class AdresaDomiciliuPage extends AbstractPage{
@@ -27,7 +27,7 @@ public class AdresaDomiciliuPage extends AbstractPage{
 
 	
 	public void fillAdresaDomiciliuForm(String mainWindowHandle, String adresa, String strada, String telefon, String tara, String judet, String localitate){
-		SearchFormPage searchForm = new SearchFormPage(driver);
+		SearchFormModalPage searchForm = new SearchFormModalPage(driver);
 		
 		inputAdresa(adresa);
 		inputStrada(strada);

@@ -17,9 +17,16 @@ import com.tools.utils.PrintUtils;
 @RunWith(JUnit4.class)
 public class BtFormTest extends BaseTest {
 	
+	private DateFinanciareModel dateFinanciareData = new DateFinanciareModel();
 	
 	@Before
 	public void setupData(){
+		
+		//date financiare
+		dateFinanciareData.alteVenituri = "200 sdasdasd weqweqwsdasd";
+		dateFinanciareData.chirie = "10";
+		dateFinanciareData.pensie = "300";
+		dateFinanciareData.venitLunar = "900";
 
 	}
 	
@@ -43,16 +50,16 @@ public class BtFormTest extends BaseTest {
 		produsDeFinantarePage.setDurata("54");
 		System.out.println(produsDeFinantarePage.grabDurata());
 		
-		dateFinanciarePage.inputAlteVenituri("200 sdasdasd weqweqwsdasd");
-		dateFinanciarePage.inputChirie("10");
-		dateFinanciarePage.inputPensie("300");
-		dateFinanciarePage.inputVenitLunar("900");
+		dateFinanciarePage.inputAlteVenituri(dateFinanciareData.alteVenituri);
+		dateFinanciarePage.inputChirie(dateFinanciareData.chirie);
+		dateFinanciarePage.inputPensie(dateFinanciareData.pensie);
+		dateFinanciarePage.inputVenitLunar(dateFinanciareData.venitLunar);
 		DateFinanciareModel dateFinanciareModel = dateFinanciarePage.grabDateFinanciare();
 		PrintUtils.printDateFinanciareModel(dateFinanciareModel);
 
-		articolePage.clickAdaugaArticolImage();
+		articolePage.fillArticoleData("WCR", "WCR", "brichete", "10", "250");
 		
-		clientDetaliiPage.fillDetaliiClient("Amu", "Mani", "1870000192193", "BN", "123465", "11254487", "9988228882", "example@mail.com", "Stangulescu Dreptu", "este", "Altele", "2", "2");
+		clientDetaliiPage.fillDetaliiClient("Amu", "Mani", "1850101192193", "BN", "123465", "11254487", "9988228882", "example@mail.com", "Stangulescu Dreptu", "este", "Altele", "2", "2");
 		ClientDetaliiModel clientDetaliiModel = clientDetaliiPage.grabDetaliiClient();
 		PrintUtils.printClientDetaliiModel(clientDetaliiModel);
 		
@@ -62,7 +69,7 @@ public class BtFormTest extends BaseTest {
 		String mainWindow = adresaDomiciliuPage.getWindowHandle();
 
 		//Open window with search items;
-		adresaDomiciliuPage.fillAdresaDomiciliuForm(mainWindow, "ADR 231", "GuguStrada ", "0011442255", "Romania", "Cluj", "Cluj");
+		adresaDomiciliuPage.fillAdresaDomiciliuForm(mainWindow, "ADR 231", "Gu gu gu Strada ", "0011442255", "Romania", "Cluj", "Cluj");
 		
 		AdresaModel adresaDomiciliu  = adresaDomiciliuPage.grabAdresaDomiciliuData();
 		PrintUtils.printAdresaModel(adresaDomiciliu);
