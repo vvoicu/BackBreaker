@@ -19,8 +19,8 @@ public class ClientDetaliiProfesionalePage extends AbstractPage {
 	private String vechimeLocMuncaSelectLocator = "[id*='ddlCurrentEmployerPeriod']";
 	private String profesieSelectLocator = "[id*='ddlProfession']";
 	// private String tipTelefonSelectLocator = "[id*='']";
-	
-	public void fillClientDetaliiProfesionale(String educatie, String stareCivila, String domeniuActivitate, String numarAngajati, String vechimeLocMunca, String profesie){
+
+	public void fillClientDetaliiProfesionale(String educatie, String stareCivila, String domeniuActivitate, String numarAngajati, String vechimeLocMunca, String profesie) {
 		selectEducatie(educatie);
 		selectStareCivila(stareCivila);
 		selectDomeniuActivitate(domeniuActivitate);
@@ -29,7 +29,7 @@ public class ClientDetaliiProfesionalePage extends AbstractPage {
 		selectProfesie(profesie);
 	}
 
-	public void grabClientDetaliiProfesionale(){
+	public void grabClientDetaliiProfesionale() {
 		grabVarsta();
 		grabEducatie();
 		grabStareCivila();
@@ -40,8 +40,7 @@ public class ClientDetaliiProfesionalePage extends AbstractPage {
 	}
 
 	public String grabVarsta() {
-		Select dataDropdown = new Select(waitForElementByCssLocator(varstaSelectLocator));
-		return dataDropdown.getFirstSelectedOption().getText();
+		return new Select(waitForElementByCssLocator(varstaSelectLocator)).getFirstSelectedOption().getText();
 	}
 
 	public void selectEducatie(String educatie) {
@@ -49,8 +48,7 @@ public class ClientDetaliiProfesionalePage extends AbstractPage {
 	}
 
 	public String grabEducatie() {
-		Select dataDropdown = new Select(waitForElementByCssLocator(educatieSelectLocator));
-		return dataDropdown.getFirstSelectedOption().getText();
+		return new Select(waitForElementByCssLocator(educatieSelectLocator)).getFirstSelectedOption().getText();
 	}
 
 	public void selectStareCivila(String stareCivila) {
@@ -58,8 +56,7 @@ public class ClientDetaliiProfesionalePage extends AbstractPage {
 	}
 
 	public String grabStareCivila() {
-		Select dataDropdown = new Select(waitForElementByCssLocator(stareCivilaSelectLocator));
-		return dataDropdown.getFirstSelectedOption().getText();
+		return new Select(waitForElementByCssLocator(stareCivilaSelectLocator)).getFirstSelectedOption().getText();
 	}
 
 	public void selectDomeniuActivitate(String domeniuActivitate) {
@@ -67,8 +64,7 @@ public class ClientDetaliiProfesionalePage extends AbstractPage {
 	}
 
 	public String grabDomeniuActivitate() {
-		Select dataDropdown = new Select(waitForElementByCssLocator(domeniuActivitateSelectLocator));
-		return dataDropdown.getFirstSelectedOption().getText();
+		return new Select(waitForElementByCssLocator(domeniuActivitateSelectLocator)).getFirstSelectedOption().getText();
 	}
 
 	public void selectNumarAngajati(String numarAngajati) {
@@ -76,8 +72,7 @@ public class ClientDetaliiProfesionalePage extends AbstractPage {
 	}
 
 	public String grabNumarAngajati() {
-		Select dataDropdown = new Select(waitForElementByCssLocator(numarAngajatiSelectLocator));
-		return dataDropdown.getFirstSelectedOption().getText();
+		return new Select(waitForElementByCssLocator(numarAngajatiSelectLocator)).getFirstSelectedOption().getText();
 	}
 
 	public void selectVechimeLocMunca(String vechimeLocMunca) {
@@ -85,8 +80,7 @@ public class ClientDetaliiProfesionalePage extends AbstractPage {
 	}
 
 	public String grabVechimeLocMunca() {
-		Select dataDropdown = new Select(waitForElementByCssLocator(vechimeLocMuncaSelectLocator));
-		return dataDropdown.getFirstSelectedOption().getText();
+		return new Select(waitForElementByCssLocator(vechimeLocMuncaSelectLocator)).getFirstSelectedOption().getText();
 	}
 
 	public void selectProfesie(String profesie) {
@@ -94,7 +88,6 @@ public class ClientDetaliiProfesionalePage extends AbstractPage {
 	}
 
 	public String grabProfesie() {
-		Select dataDropdown = new Select(waitForElementByCssLocator(profesieSelectLocator));
-		return dataDropdown.getFirstSelectedOption().getText();
+		return new Select(waitForElementByCssLocator(profesieSelectLocator)).getFirstSelectedOption().getText();
 	}
 }

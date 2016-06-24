@@ -1,7 +1,6 @@
 package com.bank.bt.pages.form.oferta;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import com.bank.bt.data.model.OfertaInfoModel;
 import com.tools.abs.AbstractPage;
@@ -39,53 +38,43 @@ public class OfertaInfoPage extends AbstractPage {
 	}
 
 	public void inputAvans(String sumaAvans) {
-		WebElement avansInput = waitForElementByCssLocator(avansInputLocator);
-		avansInput.sendKeys(sumaAvans);
+		waitForElementByCssLocator(avansInputLocator).sendKeys(sumaAvans);
 	}
 
 	public String grabNumarOferta() {
-		WebElement numarOfertaInput = waitForElementByCssLocator(numarOfertaInputLocator);
-		return numarOfertaInput.getAttribute("value");
+		return waitForElementByCssLocator(numarOfertaInputLocator).getAttribute("value");
 	}
 
 	public String grabPretTotal() {
-		WebElement pretTotalInput = waitForElementByCssLocator(pretTotalInputLocator);
-		return pretTotalInput.getAttribute("value");
+		return waitForElementByCssLocator(pretTotalInputLocator).getAttribute("value");
 	}
 
 	public String grabValFin() {
-		WebElement valFinInput = waitForElementByCssLocator(valFinInputLocator);
-		return valFinInput.getAttribute("value");
+		return waitForElementByCssLocator(valFinInputLocator).getAttribute("value");
 	}
 
 	public String grabCostTotal() {
-		WebElement costTotalInput = waitForElementByCssLocator(costTotalInputLocator);
-		return costTotalInput.getAttribute("value");
+		return waitForElementByCssLocator(costTotalInputLocator).getAttribute("value");
 	}
 
 	public String grabDae() {
-		WebElement daeInput = waitForElementByCssLocator(daeInputLocator);
-		return daeInput.getAttribute("value");
+		return waitForElementByCssLocator(daeInputLocator).getAttribute("value");
 	}
 
 	public String grabDataCreare() {
-		WebElement dataInput = waitForElementByCssLocator(dataCreareInputLocator);
-		return dataInput.getAttribute("value");
+		return waitForElementByCssLocator(dataCreareInputLocator).getAttribute("value");
 	}
 
 	public String grabAvans() {
-		WebElement avansInput = waitForElementByCssLocator(avansInputLocator);
-		return avansInput.getText();
+		return waitForElementByCssLocator(avansInputLocator).getText();
 	}
 
 	public String grabRata() {
-		WebElement rataInput = waitForElementByCssLocator(rataInputLocator);
-		return rataInput.getAttribute("value");
+		return waitForElementByCssLocator(rataInputLocator).getAttribute("value");
 	}
 
 	public String grabValoareTotalPlatibila() {
-		WebElement valoareTotalInput = waitForElementByCssLocator(valoareTolalPlatibilaInputLocator);
-		return valoareTotalInput.getAttribute("value");
+		return waitForElementByCssLocator(valoareTolalPlatibilaInputLocator).getAttribute("value");
 	}
 
 }

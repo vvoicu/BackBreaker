@@ -1,7 +1,6 @@
 package com.bank.bt.pages.form.oferta.client;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.bank.bt.data.model.ClientDetaliiModel;
@@ -69,103 +68,83 @@ public class ClientDetaliiPage extends AbstractPage {
 	}
 
 	public void inputNume(String nume) {
-		WebElement numeInput = waitForElementByCssLocator(numeInputLocator);
-		numeInput.sendKeys(nume);
+		waitForElementByCssLocator(numeInputLocator).sendKeys(nume);
 	}
 
 	public String grabNume() {
-		WebElement numeInput = waitForElementByCssLocator(numeInputLocator);
-		return numeInput.getAttribute("value");
+		return waitForElementByCssLocator(numeInputLocator).getAttribute("value");
 	}
 
 	public void inputPrenume(String prenume) {
-		WebElement prenumeInput = waitForElementByCssLocator(prenumeInputLocator);
-		prenumeInput.sendKeys(prenume);
+		waitForElementByCssLocator(prenumeInputLocator).sendKeys(prenume);
 	}
 
 	public String grabPrenume() {
-		WebElement prenumeInput = waitForElementByCssLocator(prenumeInputLocator);
-		return prenumeInput.getAttribute("value");
+		return waitForElementByCssLocator(prenumeInputLocator).getAttribute("value");
 	}
 
 	public void inputCnp(String cnp) {
-		WebElement cnpInput = waitForElementByCssLocator(cnpInputLocator);
-		cnpInput.sendKeys(cnp);
+		waitForElementByCssLocator(cnpInputLocator).sendKeys(cnp);
 	}
 
 	public String grabCnp() {
-		WebElement cnpInput = waitForElementByCssLocator(cnpInputLocator);
-		return cnpInput.getAttribute("value");
+		return waitForElementByCssLocator(cnpInputLocator).getAttribute("value");
 	}
 
 	public void inputSerieBi(String serieBi) {
-		WebElement serieBiInput = waitForElementByCssLocator(serieBiInputLocator);
-		serieBiInput.sendKeys(serieBi);
+		waitForElementByCssLocator(serieBiInputLocator).sendKeys(serieBi);
 	}
 
 	public String grabSerieBi() {
-		WebElement serieBiInput = waitForElementByCssLocator(serieBiInputLocator);
-		return serieBiInput.getAttribute("value");
+		return waitForElementByCssLocator(serieBiInputLocator).getAttribute("value");
 	}
 
 	public void inputNumarBi(String numarBi) {
-		WebElement numarBiInput = waitForElementByCssLocator(numarBiInputLocator);
-		numarBiInput.sendKeys(numarBi);
+		waitForElementByCssLocator(numarBiInputLocator).sendKeys(numarBi);
 	}
 
 	public String grabNumarBi() {
-		WebElement numarBiInput = waitForElementByCssLocator(numarBiInputLocator);
-		return numarBiInput.getAttribute("value");
+		return waitForElementByCssLocator(numarBiInputLocator).getAttribute("value");
 	}
 
 	public void inputTelefonFix(String telefonFix) {
-		WebElement telefonFixInput = waitForElementByCssLocator(telefonFixInputLocator);
-		telefonFixInput.sendKeys(telefonFix);
+		waitForElementByCssLocator(telefonFixInputLocator).sendKeys(telefonFix);
 	}
 
 	public String grabTelefonFix() {
-		WebElement telefonFixInput = waitForElementByCssLocator(telefonFixInputLocator);
-		return telefonFixInput.getAttribute("value");
+		return waitForElementByCssLocator(telefonFixInputLocator).getAttribute("value");
 	}
 
 	public void inputTelefonMobil(String telefonMobil) {
-		WebElement telefonMobilInput = waitForElementByCssLocator(telefonMobilInputLocator);
-		telefonMobilInput.sendKeys(telefonMobil);
+		waitForElementByCssLocator(telefonMobilInputLocator).sendKeys(telefonMobil);
 	}
 
 	public String grabTelefonMobil() {
-		WebElement telefonMobilInput = waitForElementByCssLocator(telefonMobilInputLocator);
-		return telefonMobilInput.getAttribute("value");
+		return waitForElementByCssLocator(telefonMobilInputLocator).getAttribute("value");
 	}
 
 	public void inputEmail(String email) {
-		WebElement emailInput = waitForElementByCssLocator(emailInputLocator);
-		emailInput.sendKeys(email);
+		waitForElementByCssLocator(emailInputLocator).sendKeys(email);
 	}
 
 	public String grabEmail() {
-		WebElement emailInput = waitForElementByCssLocator(emailInputLocator);
-		return emailInput.getAttribute("value");
+		return waitForElementByCssLocator(emailInputLocator).getAttribute("value");
 	}
 
 	public void inputProprietarImobil(String proprietarImobil) {
-		WebElement proprietarImobilInput = waitForElementByCssLocator(proprietarImobilLocuintaInputLocator);
-		proprietarImobilInput.sendKeys(proprietarImobil);
+		waitForElementByCssLocator(proprietarImobilLocuintaInputLocator).sendKeys(proprietarImobil);
 	}
 
 	public String grabProprietarImobil() {
-		WebElement proprietarImobilInput = waitForElementByCssLocator(proprietarImobilLocuintaInputLocator);
-		return proprietarImobilInput.getAttribute("value");
+		return waitForElementByCssLocator(proprietarImobilLocuintaInputLocator).getAttribute("value");
 	}
 
 	public void inputGradRudenie(String gradRudenie) {
-		WebElement gradRudenieInput = waitForElementByCssLocator(gradRudenieCuProprietarInputLocator);
-		gradRudenieInput.sendKeys(gradRudenie);
+		waitForElementByCssLocator(gradRudenieCuProprietarInputLocator).sendKeys(gradRudenie);
 	}
 
 	public String grabGradRudenie() {
-		WebElement gradRudenieInput = waitForElementByCssLocator(gradRudenieCuProprietarInputLocator);
-		return gradRudenieInput.getAttribute("value");
+		return waitForElementByCssLocator(gradRudenieCuProprietarInputLocator).getAttribute("value");
 	}
 
 	public void selectSituatieLocuintaActuala(String situatieLocuinta) {
@@ -173,8 +152,7 @@ public class ClientDetaliiPage extends AbstractPage {
 	}
 
 	public String grabSituatieLocuintaActuala() {
-		Select dataDropdown = new Select(waitForElementByCssLocator(situatieLocuintaActualaDropdownLocator));
-		return dataDropdown.getFirstSelectedOption().getText();
+		return new Select(waitForElementByCssLocator(situatieLocuintaActualaDropdownLocator)).getFirstSelectedOption().getText();
 	}
 
 	public void selectNumarMembrii(String numarMembrii) {
@@ -182,8 +160,7 @@ public class ClientDetaliiPage extends AbstractPage {
 	}
 
 	public String grabNumarMembrii() {
-		Select dataDropdown = new Select(waitForElementByCssLocator(numarDeMembriiFamilieDropdownLocator));
-		return dataDropdown.getFirstSelectedOption().getText();
+		return new Select(waitForElementByCssLocator(numarDeMembriiFamilieDropdownLocator)).getFirstSelectedOption().getText();
 	}
 
 	public void selectMembriiCareRealizeazaVenituri(String numarMembrii) {
@@ -191,8 +168,7 @@ public class ClientDetaliiPage extends AbstractPage {
 	}
 
 	public String grabMembriiCareRealizeazaVenituri() {
-		Select dataDropdown = new Select(waitForElementByCssLocator(dinCareRealizeazaVenituriLunareDropdownLocator));
-		return dataDropdown.getFirstSelectedOption().getText();
+		return new Select(waitForElementByCssLocator(dinCareRealizeazaVenituriLunareDropdownLocator)).getFirstSelectedOption().getText();
 	}
 
 }

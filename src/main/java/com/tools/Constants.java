@@ -7,8 +7,6 @@ public class Constants {
 		FIREFOX, CHROME,
 	};
 
-	public static final String BASE_URL = "http://labm3pcoe154.hpswlabs.adapps.hp.com:8088/ucmdb-browser/";
-	
 	// //wait times
 	public static final long WEBDRIVER_IMPLICIT_WAIT = 30;
 	public static final long WAIT_TIME_LARGE_SEC = 40;

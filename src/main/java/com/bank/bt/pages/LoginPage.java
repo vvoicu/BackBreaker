@@ -1,7 +1,6 @@
 package com.bank.bt.pages;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import com.tools.abs.AbstractPage;
 
@@ -20,20 +19,16 @@ public class LoginPage extends AbstractPage {
 		inputUserPass(userPass);
 		clickLoginButton();
 	}
-	
-	public void inputUserName(String userName){
-		WebElement userNameInput = waitForElementByCssLocator(userNameInputLocator);
-		userNameInput.sendKeys(userName);
+
+	public void inputUserName(String userName) {
+		waitForElementByCssLocator(userNameInputLocator).sendKeys(userName);
 	}
 
-
-	public void inputUserPass(String userPass){
-		WebElement userPassInput = waitForElementByCssLocator(userPassInputLocator);
-		userPassInput.sendKeys(userPass);
+	public void inputUserPass(String userPass) {
+		waitForElementByCssLocator(userPassInputLocator).sendKeys(userPass);
 	}
-	
-	public void clickLoginButton(){
-		WebElement loginButton = waitForElementByCssLocator(loginButtonLocator);
-		loginButton.click();
+
+	public void clickLoginButton() {
+		waitForElementByCssLocator(loginButtonLocator).click();
 	}
 }

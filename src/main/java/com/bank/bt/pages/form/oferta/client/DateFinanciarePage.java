@@ -45,73 +45,59 @@ public class DateFinanciarePage extends AbstractPage {
 	}
 
 	public String grabVenitLunar() {
-		WebElement venitLunarInput = waitForElementByCssLocator(venitLunarInputLocator);
-		return venitLunarInput.getAttribute("value");
+		return waitForElementByCssLocator(venitLunarInputLocator).getAttribute("value");
 	}
 
 	public void inputPensie(String pensieText) {
-		WebElement venitLunarInput = waitForElementByCssLocator(pensieInputLocator);
-		venitLunarInput.sendKeys(pensieText);
+		waitForElementByCssLocator(pensieInputLocator).sendKeys(pensieText);
 	}
 
 	public String grabPensie() {
-		WebElement venitLunarInput = waitForElementByCssLocator(pensieInputLocator);
-		return venitLunarInput.getAttribute("value");
+		return waitForElementByCssLocator(pensieInputLocator).getAttribute("value");
 	}
 
 	public void inputAlteVenituri(String alteVenituriText) {
-		WebElement venitLunarInput = waitForElementByCssLocator(altevenituriTextareaLocator);
-		venitLunarInput.sendKeys(alteVenituriText);
+		waitForElementByCssLocator(altevenituriTextareaLocator).sendKeys(alteVenituriText);
 	}
 
 	public String grabAlteVenituri() {
-		WebElement venitLunarInput = waitForElementByCssLocator(altevenituriTextareaLocator);
-		return venitLunarInput.getAttribute("value");
+		return waitForElementByCssLocator(altevenituriTextareaLocator).getAttribute("value");
 	}
 
 	// codebitor
 	public void clickExistaCodebitor() {
-		WebElement existaCodebitorCheckbox = waitForElementByCssLocator(existaCodebitorCheckboxLocator);
-		existaCodebitorCheckbox.click();
+		waitForElementByCssLocator(existaCodebitorCheckboxLocator).click();
 	}
 
 	public void inputVenitLunarCodebitor(String venitText) {
-		WebElement venitLunarInput = waitForElementByCssLocator(venitLunarCodebitorInputLocator);
-		venitLunarInput.sendKeys(venitText);
+		waitForElementByCssLocator(venitLunarCodebitorInputLocator).sendKeys(venitText);
 	}
 
 	public String grabVenitLunarCodebitor() {
-		WebElement venitLunarInput = waitForElementByCssLocator(venitLunarCodebitorInputLocator);
-		return venitLunarInput.getAttribute("value");
+		return waitForElementByCssLocator(venitLunarCodebitorInputLocator).getAttribute("value");
 	}
 
 	public void inputPensieCodebitor(String pensieText) {
-		WebElement pensieInput = waitForElementByCssLocator(pensieCodebitorInputLocator);
-		pensieInput.sendKeys(pensieText);
+		waitForElementByCssLocator(pensieCodebitorInputLocator).sendKeys(pensieText);
 	}
 
 	public String grabPensieCodebitor() {
-		WebElement pensieInput = waitForElementByCssLocator(pensieCodebitorInputLocator);
-		return pensieInput.getAttribute("value");
+		return waitForElementByCssLocator(pensieCodebitorInputLocator).getAttribute("value");
 	}
 
 	public void inputChirie(String pensieText) {
-		WebElement chirieInput = waitForElementByCssLocator(chirieInputLocator);
-		chirieInput.sendKeys(pensieText);
+		waitForElementByCssLocator(chirieInputLocator).sendKeys(pensieText);
 	}
 
 	public String grabChirie() {
-		WebElement chirieInput = waitForElementByCssLocator(chirieInputLocator);
-		return chirieInput.getAttribute("value");
+		return waitForElementByCssLocator(chirieInputLocator).getAttribute("value");
 	}
 
 	public void inputRateCredit(String rateCreditText) {
-		WebElement rateCreditInput = waitForElementByCssLocator(rateCreditInputLocator);
-		rateCreditInput.sendKeys(rateCreditText);
+		waitForElementByCssLocator(rateCreditInputLocator).sendKeys(rateCreditText);
 	}
 
 	public String grabRateCredit() {
-		WebElement rateCreditInput = waitForElementByCssLocator(rateCreditInputLocator);
-		return rateCreditInput.getAttribute("value");
+		return waitForElementByCssLocator(rateCreditInputLocator).getAttribute("value");
 	}
 }
