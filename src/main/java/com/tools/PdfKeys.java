@@ -26,6 +26,14 @@ public class PdfKeys {
 	public static String comisionAnaliza = "comisionAnaliza";
 	public static String valoareTotalaCredit = "valoareTotalaCredit";
 	public static String sumaReferinta = "sumaReferinta";
+	public static String nrLuniFinantare = "nrLuniFinantare";
+	
+	
+	public static String nrLuniGratie = "nrLuniGratie";
+	public static String plataLunara = "plataLunara";
+	public static String dobandaAnuala = "dobandaAnuala";
+	public static String telefonMobilSolicitant = "telefonMobilSolicitant";
+	public static String telefonFixSolicitant = "telefonFixSolicitant";
 	
 	
 	
@@ -33,7 +41,6 @@ public class PdfKeys {
 	public static String proprietarValue = "proprietarValue";
 	public static String proprietarRudenie = "proprietarRudenie";
 	
-
 	
 
 
