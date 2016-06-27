@@ -1,4 +1,4 @@
-package com.tests.bt;
+package com.tests.pdf;
 
 import java.io.File;
 import java.io.IOException;
