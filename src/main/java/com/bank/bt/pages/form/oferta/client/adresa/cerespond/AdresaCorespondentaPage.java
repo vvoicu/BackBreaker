@@ -2,7 +2,7 @@ package com.bank.bt.pages.form.oferta.client.adresa.cerespond;
 
 import org.openqa.selenium.WebDriver;
 
-import com.bank.bt.data.model.AdresaModel;
+import com.bank.bt.data.model.output.AdresaModel;
 import com.bank.bt.pages.form.oferta.SearchFormModalPage;
 import com.tools.abs.AbstractPage;
 

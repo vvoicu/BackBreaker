@@ -3,7 +3,7 @@ package com.bank.bt.pages.form.oferta.client;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import com.bank.bt.data.model.ClientDetaliiModel;
+import com.bank.bt.data.model.output.ClientDetaliiModel;
 import com.tools.abs.AbstractPage;
 
 public class ClientDetaliiPage extends AbstractPage {

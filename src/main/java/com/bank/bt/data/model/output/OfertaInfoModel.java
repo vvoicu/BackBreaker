@@ -1,4 +1,4 @@
-package com.bank.bt.data.model;
+package com.bank.bt.data.model.output;
 
 public class OfertaInfoModel {
 	

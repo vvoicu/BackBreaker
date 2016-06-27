@@ -3,7 +3,7 @@ package com.bank.bt.pages.form.oferta.client;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.bank.bt.data.model.DateFinanciareModel;
+import com.bank.bt.data.model.input.DateFinanciareModel;
 import com.tools.abs.AbstractPage;
 
 public class DateFinanciarePage extends AbstractPage {

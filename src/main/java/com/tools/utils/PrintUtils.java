@@ -1,10 +1,10 @@
 package com.tools.utils;
 
-import com.bank.bt.data.model.AdresaModel;
-import com.bank.bt.data.model.BrokerInfoModel;
-import com.bank.bt.data.model.ClientDetaliiModel;
-import com.bank.bt.data.model.DateFinanciareModel;
-import com.bank.bt.data.model.OfertaInfoModel;
+import com.bank.bt.data.model.input.DateFinanciareModel;
+import com.bank.bt.data.model.output.AdresaModel;
+import com.bank.bt.data.model.output.BrokerInfoModel;
+import com.bank.bt.data.model.output.ClientDetaliiModel;
+import com.bank.bt.data.model.output.OfertaInfoModel;
 
 public class PrintUtils {
 

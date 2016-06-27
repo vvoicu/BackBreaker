@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import com.DateAndPOD;
-import com.bank.bt.data.model.AdresaModel;
-import com.bank.bt.data.model.BrokerInfoModel;
-import com.bank.bt.data.model.ClientDetaliiModel;
-import com.bank.bt.data.model.DateFinanciareModel;
-import com.bank.bt.data.model.OfertaInfoModel;
+import com.bank.bt.data.model.input.DateFinanciareModel;
+import com.bank.bt.data.model.output.AdresaModel;
+import com.bank.bt.data.model.output.BrokerInfoModel;
+import com.bank.bt.data.model.output.ClientDetaliiModel;
+import com.bank.bt.data.model.output.OfertaInfoModel;
 import com.tests.BaseTest;
 import com.tools.utils.PrintUtils;
 
@@ -27,6 +27,14 @@ public class BtFormTest extends BaseTest {
 		dateFinanciareData.chirie = "10";
 		dateFinanciareData.pensie = "300";
 		dateFinanciareData.venitLunar = "900";
+		
+		dateFinanciareData.durata = "54";
+		
+		dateFinanciareData.tip = "WCR";
+		dateFinanciareData.denumire = "WCR";
+		dateFinanciareData.descriere = "brichete";
+		dateFinanciareData.unitati = "10";
+		dateFinanciareData.pretUnitate = "250";
 
 	}
 	
@@ -47,7 +55,7 @@ public class BtFormTest extends BaseTest {
 		OfertaInfoModel ofertaData = ofertaInfoPage.grabOfertaInfoData();
 		PrintUtils.printOfertaInfoModel(ofertaData);
 		
-		produsDeFinantarePage.setDurata("54");
+		produsDeFinantarePage.setDurata(dateFinanciareData.durata);
 		System.out.println(produsDeFinantarePage.grabDurata());
 		
 		dateFinanciarePage.inputAlteVenituri(dateFinanciareData.alteVenituri);
@@ -57,7 +65,7 @@ public class BtFormTest extends BaseTest {
 		DateFinanciareModel dateFinanciareModel = dateFinanciarePage.grabDateFinanciare();
 		PrintUtils.printDateFinanciareModel(dateFinanciareModel);
 
-		articolePage.fillArticoleData("WCR", "WCR", "brichete", "10", "250");
+		articolePage.fillArticoleData(dateFinanciareData.tip, dateFinanciareData.denumire, dateFinanciareData.descriere, dateFinanciareData.unitati, dateFinanciareData.pretUnitate);
 		
 		clientDetaliiPage.fillDetaliiClient("Amu", "Mani", "1850101192193", "BN", "123465", "11254487", "9988228882", "example@mail.com", "Stangulescu Dreptu", "este", "Altele", "2", "2");
 		ClientDetaliiModel clientDetaliiModel = clientDetaliiPage.grabDetaliiClient();

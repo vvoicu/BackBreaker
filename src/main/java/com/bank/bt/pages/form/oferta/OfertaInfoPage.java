@@ -2,7 +2,7 @@ package com.bank.bt.pages.form.oferta;
 
 import org.openqa.selenium.WebDriver;
 
-import com.bank.bt.data.model.OfertaInfoModel;
+import com.bank.bt.data.model.output.OfertaInfoModel;
 import com.tools.abs.AbstractPage;
 
 public class OfertaInfoPage extends AbstractPage {
