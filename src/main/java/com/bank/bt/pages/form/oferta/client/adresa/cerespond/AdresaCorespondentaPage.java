@@ -34,13 +34,13 @@ public class AdresaCorespondentaPage extends AbstractPage{
 		inputStrada(strada);
 		inputTelefon(telefon);
 		clickTaraFormViewButton();
-		searchForm.inputSearchTerm(mainWindowHandle, tara);
+		searchForm.inputSearchAndSelectFromList(mainWindowHandle, tara);
 		
 		clickJudetFormButton();
-		searchForm.inputSearchTerm(mainWindowHandle, judet);
+		searchForm.inputSearchAndSelectFromList(mainWindowHandle, judet);
 		
 		clickLocalitateFormButton();
-		searchForm.inputSearchTerm(mainWindowHandle, localitate);
+		searchForm.inputSearchAndSelectFromList(mainWindowHandle, localitate);
 		
 	}
 	

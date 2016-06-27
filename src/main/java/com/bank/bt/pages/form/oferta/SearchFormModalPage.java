@@ -61,7 +61,7 @@ public class SearchFormModalPage extends AbstractPage{
 		switchToWindow(mainWindow);
 	}
 
-	public void inputSearchTerm(String mainWindow, String search) {
+	public void inputSearchAndSelectFromList(String mainWindow, String search) {
 		switchToExtraWindow(mainWindow);
 		inputSearchTerm(search);
 		clickSearchButton();
