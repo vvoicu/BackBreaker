@@ -62,11 +62,11 @@ public class AbstractPage {
 		selectDropdown.selectByVisibleText(textValue);
 	}
 	
-	protected void windowHandles(){
+	protected void printWindowHandles(){
 		Set<String> windowHandles = driver.getWindowHandles();
 		
 		for (String string : windowHandles) {
-			System.out.println("WindowNow: " + string);
+			System.out.println("Window: " + string);
 		}
 	}
 	
