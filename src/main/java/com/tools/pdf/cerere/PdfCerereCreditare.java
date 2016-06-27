@@ -21,6 +21,11 @@ public class PdfCerereCreditare {
 		// connect area with page
 		stripper.extractRegions(firstPage);
 
+		//print extracted fields
+		printPdfDocument(stripper);
+	}
+	
+	public static void printPdfDocument(PDFTextStripperByArea stripper){
 		System.out.println("creditSuma: " + stripper.getTextForRegion(PdfKeys.creditSuma));
 		System.out.println("tipCredit: " + stripper.getTextForRegion(PdfKeys.tipCredit));
 
@@ -57,6 +62,8 @@ public class PdfCerereCreditare {
 		System.out.println("telefonMobilSolicitant: " + stripper.getTextForRegion(PdfKeys.telefonMobilSolicitant));
 		System.out.println("telefonFixSolicitant: " + stripper.getTextForRegion(PdfKeys.telefonFixSolicitant));
 	}
+	
+
 
 	public static PDFTextStripperByArea defineFirstPageAreas() throws IOException {
 		PDFTextStripperByArea areaStripper = new PDFTextStripperByArea();
@@ -140,8 +147,6 @@ public class PdfCerereCreditare {
 
 		Rectangle proprietarRudenie = new Rectangle(110, 300, 100, 20);
 		areaStripper.addRegion(PdfKeys.proprietarRudenie, proprietarRudenie);
-
-		System.out.println("Text in the area:" + proprietarValue);
 
 		return areaStripper;
 	}

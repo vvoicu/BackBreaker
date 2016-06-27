@@ -9,5 +9,4 @@ public class PdfDataModel {
 	public String numarBuletin = "";
 	public String cnp = "";
 	public String adresa = "";
-//	public String pret = "";
 }
