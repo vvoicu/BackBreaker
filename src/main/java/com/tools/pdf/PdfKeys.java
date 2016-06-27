@@ -1,4 +1,4 @@
-package com.tools;
+package com.tools.pdf;
 
 public class PdfKeys {
 
@@ -34,7 +34,6 @@ public class PdfKeys {
 	public static String dobandaAnuala = "dobandaAnuala";
 	public static String telefonMobilSolicitant = "telefonMobilSolicitant";
 	public static String telefonFixSolicitant = "telefonFixSolicitant";
-	
 	
 	
 	public static String proprietarTitle = "proprietarTitle";
