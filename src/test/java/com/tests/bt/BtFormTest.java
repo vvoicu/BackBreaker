@@ -87,8 +87,8 @@ public class BtFormTest extends BaseTest {
 		AdresaModel adresaCorespondenta  = adresaCorespondentaPage.grabAdresaCorespondentaData();
 		PrintUtils.printAdresaModel(adresaCorespondenta);
 		
-//		String alertMessage = footerActionsPage.clickSalveaza();
-//		System.out.println("Alert: " + alertMessage);
+		String alertMessage = footerActionsPage.clickSalveaza();
+		System.out.println("Alert: " + alertMessage);
 		
 	}
 
